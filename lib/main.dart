@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:qudsi_app/ui/views/splash_screen.dart';
+
+import 'app/app.router.dart';
 
 void main() {
   runApp(QudsiApp());
@@ -12,32 +15,13 @@ class QudsiApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SplashScreen(), // MyHomePage(title: 'Qudsi Home Page'),
+      home: SplashScreenView(),
+       // MyHomePage(title: 'Qudsi Home Page'),
+       initialRoute: Routes.splashScreenView,
+       onGenerateRoute: StackedRouter().onGenerateRoute,
+
     );
   }
 }
 
-class SplashScreen extends StatelessWidget {
-  const SplashScreen({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Image.asset("assets/images/image.png"),
-          Center(
-              child: Container(
-            child: Column(
-              children: [
-              Image.asset("assets/images/logo.png"),
-              Text("للأحاديث القدسية"),
-    
-              ]),
-          )),
-          Image.asset("assets/images/image.png"),
-        ],
-      ),
-    );
-  }
-}
