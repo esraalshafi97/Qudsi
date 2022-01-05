@@ -11,6 +11,7 @@ class _SplashScreenViewState extends State<SplashScreenView> {
   
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       body: Column(
         children: [
