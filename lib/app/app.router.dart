@@ -28,9 +28,11 @@ class StackedRouter extends RouterBase {
   Map<Type, StackedRouteFactory> get pagesMap => _pagesMap;
   final _pagesMap = <Type, StackedRouteFactory>{
     SplashScreenView: (data) {
-      return buildAdaptivePageRoute<dynamic>(
-        builder: (context) => SplashScreenView(),
+      return PageRouteBuilder<dynamic>(
+        pageBuilder: (context, animation, secondaryAnimation) => SplashScreenView(),
         settings: data,
+        transitionsBuilder: TransitionsBuilders.fadeIn,
+        transitionDuration: const Duration(milliseconds: 500),
       );
     },
     HomeScreenView: (data) {

@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
-class SplashScreenView extends StatelessWidget {
+class SplashScreenView extends StatefulWidget {
   const SplashScreenView({Key? key}) : super(key: key);
 
+  @override
+  State<SplashScreenView> createState() => _SplashScreenViewState();
+}
+
+class _SplashScreenViewState extends State<SplashScreenView> {
+  @override
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(

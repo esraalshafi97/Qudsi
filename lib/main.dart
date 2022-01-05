@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qudsi_app/ui/views/home/home_screen.dart';
 import 'package:qudsi_app/ui/views/splash_screen.dart';
 
 import 'app/app.router.dart';
@@ -15,11 +16,10 @@ class QudsiApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SplashScreenView(),
+       home: HomeScreenView(),
        // MyHomePage(title: 'Qudsi Home Page'),
        initialRoute: Routes.splashScreenView,
        onGenerateRoute: StackedRouter().onGenerateRoute,
-
     );
   }
 }
