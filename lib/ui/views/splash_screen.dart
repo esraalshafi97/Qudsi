@@ -11,22 +11,53 @@ class _SplashScreenViewState extends State<SplashScreenView> {
   
   @override
   Widget build(BuildContext context) {
-    
+
     return Scaffold(
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Image.asset("assets/images/image.png"),
-          Center(
-              child: Container(
+          Container(
+             height: MediaQuery.of(context).size.height*.25,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Image.asset("assets/images/panner.png"),
+              ],
+            ),
+          ),  
+          Container(
+            height: MediaQuery.of(context).size.height*.50,
+
+          child: Center(
             child: Column(
               children: [
-              Image.asset("assets/images/logo.png"),
-              Text("للأحاديث القدسية"),
+              Text("home"),
               ]),
-          )),
-          Image.asset("assets/images/image.png"),
+          ),
+          ),
+           Container(
+             height: MediaQuery.of(context).size.height*.25,
+             child: Column(
+               mainAxisAlignment: MainAxisAlignment.end,
+               crossAxisAlignment: CrossAxisAlignment.end,
+               children: [
+                 Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Transform.rotate(
+                      angle: 0,
+                      child:Image.asset("assets/images/panner-bottom.png") ,
+                    )
+          
+                  ],
+          ),
+               ],
+             ),
+           ), 
         ],
       ),
     );
+ 
   }
 }
